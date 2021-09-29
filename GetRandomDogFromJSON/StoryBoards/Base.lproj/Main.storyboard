@@ -20,28 +20,43 @@
                                 <rect key="frame" x="16" y="16" width="288" height="325"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44A-4t-1y8">
-                                <rect key="frame" x="135.5" y="465" width="49.5" height="31"/>
+                                <rect key="frame" x="50" y="465" width="220" height="31"/>
                                 <color key="backgroundColor" red="0.99214893579483032" green="0.62139099836349487" blue="0.010215847752988338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Run"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Me Puppy">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="runImageButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSo-Xg-IoS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0E-EX-kjg">
+                                <rect key="frame" x="139" y="388" width="42" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="44A-4t-1y8" firstAttribute="top" secondItem="0bg-EV-NIl" secondAttribute="bottom" constant="124" id="5dd-v6-QFN"/>
                             <constraint firstItem="0bg-EV-NIl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6gt-CO-dJv"/>
+                            <constraint firstItem="0bg-EV-NIl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.572183" id="8WI-xo-2a0"/>
                             <constraint firstItem="0bg-EV-NIl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="E0t-XA-PLS"/>
                             <constraint firstItem="44A-4t-1y8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YEk-LN-EP4"/>
+                            <constraint firstItem="44A-4t-1y8" firstAttribute="top" secondItem="e0E-EX-kjg" secondAttribute="bottom" constant="48" id="Ye0-dh-UCk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e0E-EX-kjg" secondAttribute="trailing" constant="139" id="c3c-IU-7co"/>
+                            <constraint firstItem="e0E-EX-kjg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fJA-Ld-TYx"/>
                             <constraint firstAttribute="trailing" secondItem="0bg-EV-NIl" secondAttribute="trailing" constant="16" id="hHS-I9-FRh"/>
                             <constraint firstItem="0bg-EV-NIl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jcA-hS-R28"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="44A-4t-1y8" secondAttribute="bottom" constant="72" id="m1D-lZ-6Wh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="44A-4t-1y8" secondAttribute="trailing" constant="50" id="q0l-PW-rbu"/>
+                            <constraint firstItem="44A-4t-1y8" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0545775" id="rfQ-OH-VGi"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dogsCount" destination="e0E-EX-kjg" id="ukn-ya-K6q"/>
                         <outlet property="runImageButton" destination="44A-4t-1y8" id="xbx-a8-rTr"/>
                         <outlet property="showImage" destination="0bg-EV-NIl" id="WHr-bB-FOv"/>
                     </connections>
@@ -52,8 +67,8 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

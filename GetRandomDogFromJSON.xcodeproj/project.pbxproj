@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12641E162704F5B600450ACE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12641E152704F5B600450ACE /* NetworkManager.swift */; };
 		127C43B827017B8F0020E4F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C43B727017B8F0020E4F4 /* AppDelegate.swift */; };
 		127C43BA27017B8F0020E4F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C43B927017B8F0020E4F4 /* SceneDelegate.swift */; };
 		127C43BC27017B8F0020E4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C43BB27017B8F0020E4F4 /* ViewController.swift */; };
 		127C43BF27017B8F0020E4F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127C43BD27017B8F0020E4F4 /* Main.storyboard */; };
 		127C43C127017B910020E4F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127C43C027017B910020E4F4 /* Assets.xcassets */; };
 		127C43C427017B910020E4F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127C43C227017B910020E4F4 /* LaunchScreen.storyboard */; };
-		127C43CC2701808B0020E4F4 /* RandomDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C43CB2701808B0020E4F4 /* RandomDog.swift */; };
+		127C43CC2701808B0020E4F4 /* RandomDogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C43CB2701808B0020E4F4 /* RandomDogImage.swift */; };
 		4DD4F5754BB2D5BB9ECDD877 /* Pods_GetRandomDogFromJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF7DE91D09E4B570A5CD142 /* Pods_GetRandomDogFromJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12641E152704F5B600450ACE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		127C43B427017B8F0020E4F4 /* GetRandomDogFromJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetRandomDogFromJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		127C43B727017B8F0020E4F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		127C43B927017B8F0020E4F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +28,7 @@
 		127C43C027017B910020E4F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		127C43C327017B910020E4F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		127C43C527017B910020E4F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		127C43CB2701808B0020E4F4 /* RandomDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDog.swift; sourceTree = "<group>"; };
+		127C43CB2701808B0020E4F4 /* RandomDogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDogImage.swift; sourceTree = "<group>"; };
 		2BF7DE91D09E4B570A5CD142 /* Pods_GetRandomDogFromJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRandomDogFromJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7868E8EEE086E458C2C61F5B /* Pods-GetRandomDogFromJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRandomDogFromJSON.release.xcconfig"; path = "Target Support Files/Pods-GetRandomDogFromJSON/Pods-GetRandomDogFromJSON.release.xcconfig"; sourceTree = "<group>"; };
 		B1D8A21F62AA96323E25CEAB /* Pods-GetRandomDogFromJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRandomDogFromJSON.debug.xcconfig"; path = "Target Support Files/Pods-GetRandomDogFromJSON/Pods-GetRandomDogFromJSON.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +46,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12641E17270521A500450ACE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				12641E152704F5B600450ACE /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		12641E18270521BC00450ACE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				127C43CB2701808B0020E4F4 /* RandomDogImage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12641E19270521C300450ACE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				127C43BB27017B8F0020E4F4 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		12641E1A270521E100450ACE /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				127C43C227017B910020E4F4 /* LaunchScreen.storyboard */,
+				127C43BD27017B8F0020E4F4 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		12641E1B270529A200450ACE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				127C43B727017B8F0020E4F4 /* AppDelegate.swift */,
+				127C43B927017B8F0020E4F4 /* SceneDelegate.swift */,
+				127C43C027017B910020E4F4 /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		127C43AB27017B8F0020E4F4 = {
 			isa = PBXGroup;
 			children = (
@@ -65,13 +110,11 @@
 		127C43B627017B8F0020E4F4 /* GetRandomDogFromJSON */ = {
 			isa = PBXGroup;
 			children = (
-				127C43B727017B8F0020E4F4 /* AppDelegate.swift */,
-				127C43B927017B8F0020E4F4 /* SceneDelegate.swift */,
-				127C43BB27017B8F0020E4F4 /* ViewController.swift */,
-				127C43CB2701808B0020E4F4 /* RandomDog.swift */,
-				127C43BD27017B8F0020E4F4 /* Main.storyboard */,
-				127C43C027017B910020E4F4 /* Assets.xcassets */,
-				127C43C227017B910020E4F4 /* LaunchScreen.storyboard */,
+				12641E1B270529A200450ACE /* App */,
+				12641E19270521C300450ACE /* ViewController */,
+				12641E17270521A500450ACE /* Services */,
+				12641E18270521BC00450ACE /* Model */,
+				12641E1A270521E100450ACE /* StoryBoards */,
 				127C43C527017B910020E4F4 /* Info.plist */,
 			);
 			path = GetRandomDogFromJSON;
@@ -91,7 +134,6 @@
 				B1D8A21F62AA96323E25CEAB /* Pods-GetRandomDogFromJSON.debug.xcconfig */,
 				7868E8EEE086E458C2C61F5B /* Pods-GetRandomDogFromJSON.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,7 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				127C43BC27017B8F0020E4F4 /* ViewController.swift in Sources */,
-				127C43CC2701808B0020E4F4 /* RandomDog.swift in Sources */,
+				127C43CC2701808B0020E4F4 /* RandomDogImage.swift in Sources */,
+				12641E162704F5B600450ACE /* NetworkManager.swift in Sources */,
 				127C43B827017B8F0020E4F4 /* AppDelegate.swift in Sources */,
 				127C43BA27017B8F0020E4F4 /* SceneDelegate.swift in Sources */,
 			);
