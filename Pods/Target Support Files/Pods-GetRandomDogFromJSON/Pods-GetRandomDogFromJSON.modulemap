@@ -1,0 +1,6 @@
+framework module Pods_GetRandomDogFromJSON {
+  umbrella header "Pods-GetRandomDogFromJSON-umbrella.h"
+
+  export *
+  module * { export * }
+}
