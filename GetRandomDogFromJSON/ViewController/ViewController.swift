@@ -11,10 +11,9 @@ import Alamofire
 class ViewController: UIViewController {
     
     let urlAddress = "https://random.dog/woof.json"
-    var dataFromJSON = RandomDogImage(url: "https://random.dog/8b48bc81-16fd-4d1d-b593-1d671107ca5a.jpg")
-    var count = 0
+    var dataFromJSON = RandomDogImage(url: "")
     
-    @IBOutlet var dogsCount: UILabel!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var showImage: UIImageView!
     @IBOutlet var runImageButton: UIButton!
     
@@ -22,17 +21,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         runImageButton.layer.cornerRadius = 10
         
-        NetworkManager.shared.fetchImage(from: dataFromJSON.url) { data in
-            switch data {
-            case .success(let data):
-                self.showImage.image = UIImage(data: data)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
     }
     
     @IBAction func runImageButtonPressed() {
+        self.activityIndicator.startAnimating()
+        showImage.image = UIImage()
+        getDataFromServer()
+        fetchImage()
+    }
+    
+    private func getDataFromServer () {
         NetworkManager.shared.getDataFromServer(urlAddress) { result in
             switch result {
             case .success(let data):
@@ -42,18 +42,18 @@ class ViewController: UIViewController {
                 print(error)
             }
         }
-        
+    }
+    
+    private func fetchImage () {
         NetworkManager.shared.fetchImage(from: dataFromJSON.url) { data in
             switch data {
             case .success(let data):
                 self.showImage.image = UIImage(data: data)
+                self.activityIndicator.stopAnimating()
+                
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-        
-        count += 1
-        dogsCount.text = "\(count)"
-        
     }
 }
